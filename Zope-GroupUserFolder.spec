@@ -63,5 +63,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO ChangeLog INSTALL.txt LICENSE.*
+%doc CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO ChangeLog INSTALL.txt
 %{_datadir}/%{name}
