@@ -4,7 +4,7 @@ Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿y
 Name:		Zope-%{zope_subname}
 Version:	3.1.1
 # %%define		sub_ver Beta2
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
