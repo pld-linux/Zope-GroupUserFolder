@@ -4,12 +4,12 @@ Summary:	A Zope product, a convenient tool to manage groups of users within Zope
 Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
 Name:		Zope-%{zope_subname}
 Version:	2.0
-%define		sub_ver Beta1
-Release:	1.%{sub_ver}.2
+%define		sub_ver Beta2
+Release:	1.%{sub_ver}.1
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}%{sub_ver}.tar.gz
-# Source0-md5:	baf00efbaf31f7b5dfc05bc9d45f98cb
+# Source0-md5:	1b1922ff25c496bbc837f31a486d6b04
 Patch0:		Zope-GroupUserFolder-bad_path_python.patch
 URL:		http://sourceforge.net/projects/collective/
 %pyrequires_eq	python-modules
@@ -36,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 # should tests be included or not?
-cp -af {Extensions,doc,dtml,interfaces,skins,tests,website,www,*.py,*.gif,refresh.txt,version.txt} \
+cp -af {Extensions,data,doc,dtml,interfaces,skins,tests,website,www,*.py,*.gif,refresh.txt,version.txt,PRODUCT_NAME} \
 	$RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
