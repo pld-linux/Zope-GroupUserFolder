@@ -11,6 +11,7 @@ Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
 # Source0-md5:	6841094113fdb649e843b4092bb9ef16
 Patch0:		Zope-GroupUserFolder-bad_path_python.patch
 URL:		http://sourceforge.net/projects/collective/
+BuildRequires:  python
 %pyrequires_eq	python-modules
 Requires:	Zope
 Requires(post,postun):  /usr/sbin/installzopeproduct
