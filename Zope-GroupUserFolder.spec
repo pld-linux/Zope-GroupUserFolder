@@ -27,8 +27,6 @@ do zarz±dzania grupami i u¿ytkownikami zawartymi w Zope.
 %prep
 %setup -q -n %{zope_subname}
 
-rm -f interfaces/.cvsignore
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
