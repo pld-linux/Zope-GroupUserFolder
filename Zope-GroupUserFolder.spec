@@ -1,10 +1,10 @@
 %include	/usr/lib/rpm/macros.python
 %define		zope_subname	GroupUserFolder
-Summary:	GroupUserFolder - a Zope product, a convenient tool to manage groups of users within Zope
-Summary(pl):	GroupUserFolder - dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
+Summary:	A Zope product, a convenient tool to manage groups of users within Zope
+Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
 Name:		Zope-%{zope_subname}
 Version:	1.32
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
@@ -12,10 +12,9 @@ Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/collective/
 %pyrequires_eq	python-modules
 Requires:	Zope
+Requires(post,postun):  /usr/sbin/installzopeproduct
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define 	product_dir	/usr/lib/zope/Products
 
 %description
 GroupUserFolder is a Zope product that is a convenient tool to manage
