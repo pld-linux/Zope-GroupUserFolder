@@ -4,7 +4,7 @@ Summary:	GroupUserFolder - a Zope product, a convenient tool to manage groups of
 Summary(pl):	GroupUserFolder - dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
 Name:		Zope-%{zope_subname}
 Version:	1.31
-Release:	1
+Release:	2
 License:	GNU
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
@@ -45,7 +45,7 @@ cp -af * $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 %py_ocomp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
 rm -rf $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}/docs
-find $RPM_BUILD_ROOT -type f -name "*.py" -exec rm -rf {} \;;
+# find $RPM_BUILD_ROOT -type f -name "*.py" -exec rm -rf {} \;;
 
 %clean
 rm -rf $RPM_BUILD_ROOT
