@@ -3,12 +3,12 @@
 Summary:	GroupUserFolder - a Zope product, a convenient tool to manage groups of users within Zope
 Summary(pl):	GroupUserFolder - dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
 Name:		Zope-%{zope_subname}
-Version:	1.31
-Release:	2
+Version:	1.32
+Release:	1
 License:	GNU
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
-# Source0-md5:	a354435c5aa13c63ba04713850d122d9
+# Source0-md5:	12066901e073b148422058876adc0773
 URL:		http://sourceforge.net/projects/collective/
 %pyrequires_eq	python-modules
 Requires:	Zope
@@ -33,7 +33,7 @@ cd %{zope_subname}
 rm -rf `find . -type d -name debian`
 rm -f `find . -type f -name .cvsignore`
 mkdir docs
-mv -f CHANGES CONTRIBUTORS ChangeLog INSTALL.txt README.txt TODO docs
+mv -f CHANGES CONTRIBUTORS INSTALL.txt README.txt TODO docs
 
 %install
 rm -rf $RPM_BUILD_ROOT
