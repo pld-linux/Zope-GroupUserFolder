@@ -5,7 +5,7 @@ Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿y
 Name:		Zope-%{zope_subname}
 Version:	2.0
 %define		sub_ver Beta1
-Release:	1.%{sub_ver}.1
+Release:	1.%{sub_ver}.2
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}%{sub_ver}.tar.gz
@@ -36,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 # should tests be included or not?
-cp -af {Extensions,doc,dtml,interfaces,skins,tests,website,www,*.py,*.gif} \
+cp -af {Extensions,doc,dtml,interfaces,skins,tests,website,www,*.py,*.gif,refresh.txt,version.txt} \
 	$RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
@@ -63,5 +63,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO
+%doc CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO ChangeLog INSTALL.txt LICENSE.*
 %{_datadir}/%{name}
