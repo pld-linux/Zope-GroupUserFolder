@@ -1,0 +1,9 @@
+diff -urN GroupUserFolder/doc/py2htmldoc.py GroupUserFolder_popr/doc/py2htmldoc.py
+--- GroupUserFolder/doc/py2htmldoc.py	2003-07-09 17:48:06.000000000 +0200
++++ GroupUserFolder_popr/doc/py2htmldoc.py	2003-11-18 14:45:21.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/python -O
++#!/usr/bin/python -O
+ 
+ """ 
+     Automatic Python Documentation in HTML
