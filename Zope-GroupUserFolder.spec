@@ -3,13 +3,13 @@
 Summary:	A Zope product, a convenient tool to manage groups of users within Zope
 Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
 Name:		Zope-%{zope_subname}
-Version:	2.0.1
+Version:	3.0
 # %%define		sub_ver Beta2
 Release:	1
 License:	GPL v2+
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tgz
-# Source0-md5:	d56489d167e37e0bd7afc444bff0417d
+Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
+# Source0-md5:	b85b7a522418815bf7ad328c2c76d9f0
 Patch0:		Zope-GroupUserFolder-bad_path_python.patch
 URL:		http://sourceforge.net/projects/collective/
 %pyrequires_eq	python-modules
@@ -30,6 +30,7 @@ do zarz±dzania grupami i u¿ytkownikami zawartymi w Zope.
 %setup -q -n %{zope_subname}
 %patch0 -p1
 rm -f interfaces/.cvsignore
+rm -f doc/py2htmldoc.py.orig
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -63,5 +64,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO INSTALL.txt design.txt
+%doc ChangeLog CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO INSTALL.txt design.txt
 %{_datadir}/%{name}
