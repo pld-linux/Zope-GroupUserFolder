@@ -9,6 +9,7 @@ License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
 # Source0-md5:	12066901e073b148422058876adc0773
+Patch0:		Zope-GroupUserFolder-bad_path_python.patch
 URL:		http://sourceforge.net/projects/collective/
 %pyrequires_eq	python-modules
 Requires:	Zope
@@ -26,6 +27,7 @@ do zarz±dzania grupami i u¿ytkownikami zawartymi w Zope.
 
 %prep
 %setup -q -n %{zope_subname}
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
