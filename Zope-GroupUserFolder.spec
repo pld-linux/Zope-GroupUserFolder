@@ -2,14 +2,14 @@
 Summary:	A Zope product, a convenient tool to manage groups of users within Zope
 Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
 Name:		Zope-%{zope_subname}
-Version:	3.1.1
+Version:	3.2
 # %%define		sub_ver Beta2
-Release:	2
+Release:	1
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
-# Source0-md5:	6841094113fdb649e843b4092bb9ef16
-Patch0:		Zope-GroupUserFolder-bad_path_python.patch
+# Source0-md5:	0b1de6811b6f87812ebf0e247e9d0a0b
+# Patch0:		Zope-GroupUserFolder-bad_path_python.patch
 URL:		http://sourceforge.net/projects/collective/
 BuildRequires:	python
 %pyrequires_eq	python-modules
@@ -28,7 +28,7 @@ do zarz±dzania grupami i u¿ytkownikami zawartymi w Zope.
 
 %prep
 %setup -q -n %{zope_subname}
-%patch0 -p1
+# %%patch0 -p1
 rm -f interfaces/.cvsignore
 rm -f doc/py2htmldoc.py.orig
 
@@ -36,7 +36,7 @@ rm -f doc/py2htmldoc.py.orig
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af {Extensions,doc,dtml,interfaces,skins,tests,website,www,*.py,*.gif,refresh.txt,version.txt,PRODUCT_NAME,product.txt} \
+cp -af {Extensions,doc,dtml,interfaces,skins,tests,www,*.py,*.gif,refresh.txt,version.txt,PRODUCT_NAME,product.txt} \
 	$RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
@@ -63,5 +63,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO INSTALL.txt design.txt
+%doc ABOUT ChangeLog CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO INSTALL.txt design.txt
 %{_datadir}/%{name}
