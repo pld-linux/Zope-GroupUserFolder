@@ -2,13 +2,13 @@
 Summary:	A Zope product, a convenient tool to manage groups of users within Zope
 Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
 Name:		Zope-%{zope_subname}
-Version:	3.2
+Version:	3.22
 # %%define		sub_ver Beta2
 Release:	1
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/collective/%{zope_subname}-%{version}.tar.gz
-# Source0-md5:	0b1de6811b6f87812ebf0e247e9d0a0b
+# Source0-md5:	94555388215a9da28134ce5431b0b07e
 # Patch0:		Zope-GroupUserFolder-bad_path_python.patch
 URL:		http://sourceforge.net/projects/collective/
 BuildRequires:	python
@@ -63,5 +63,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc ABOUT ChangeLog CHANGES CONTRIBUTORS README-Plone.stx README.txt TODO INSTALL.txt design.txt
+%doc ABOUT CHANGES CONTRIBUTORS README.txt TODO INSTALL.txt design.txt
 %{_datadir}/%{name}
