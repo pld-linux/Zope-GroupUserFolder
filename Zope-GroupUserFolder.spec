@@ -1,9 +1,9 @@
 %define		zope_subname	GroupUserFolder
+%define		part_name groupuserfolder-3-5
 Summary:	A Zope product, a convenient tool to manage groups of users within Zope
 Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
 Name:		Zope-%{zope_subname}
 Version:	3.5
-%define		part_name groupuserfolder-3-5
 # %%define		sub_ver Beta2
 Release:	1
 Epoch:		1
@@ -11,12 +11,13 @@ License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://plone.org/products/groupuserfolder/releases/%{version}/%{part_name}-tar.gz
 # Source0-md5:	bbde3e369202eed37c833d37f176af26
-# Patch0:		Zope-GroupUserFolder-bad_path_python.patch
 URL:		http://ingeniweb.sourceforge.net/Products/GroupUserFolder/
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.268
+# Patch0:		Zope-GroupUserFolder-bad_path_python.patch
 %pyrequires_eq	python-modules
-Requires:	Zope
 Requires(post,postun):	/usr/sbin/installzopeproduct
+Requires:	Zope
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -51,16 +52,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
-	/usr/sbin/installzopeproduct -d %{zope_subname} 
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	/usr/sbin/installzopeproduct -d %{zope_subname}
+	%service -q zope restart
 fi
 
 %files
