@@ -1,7 +1,7 @@
 %define		zope_subname	GroupUserFolder
 %define		part_name groupuserfolder-3-5
 Summary:	A Zope product, a convenient tool to manage groups of users within Zope
-Summary(pl):	Dodatek do Zope z wygodnym narzêdziem do zarz±dzaniem grupami i u¿ytkownikami w Zope
+Summary(pl.UTF-8):   Dodatek do Zope z wygodnym narzÄ™dziem do zarzÄ…dzaniem grupami i uÅ¼ytkownikami w Zope
 Name:		Zope-%{zope_subname}
 Version:	3.5
 # %%define		sub_ver Beta2
@@ -25,9 +25,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 GroupUserFolder is a Zope product that is a convenient tool to manage
 groups of users within Zope.
 
-%description -l pl
-GroupUserFolder jest dodatkiem dla Zope zawieraj±cym wygodne narzêdzie
-do zarz±dzania grupami i u¿ytkownikami zawartymi w Zope.
+%description -l pl.UTF-8
+GroupUserFolder jest dodatkiem dla Zope zawierajÄ…cym wygodne narzÄ™dzie
+do zarzÄ…dzania grupami i uÅ¼ytkownikami zawartymi w Zope.
 
 %prep
 %setup -q -n %{zope_subname}
