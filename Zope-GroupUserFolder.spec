@@ -1,7 +1,7 @@
 %define		zope_subname	GroupUserFolder
 %define		part_name groupuserfolder-3-5
 Summary:	A Zope product, a convenient tool to manage groups of users within Zope
-Summary(pl.UTF-8):   Dodatek do Zope z wygodnym narzędziem do zarządzaniem grupami i użytkownikami w Zope
+Summary(pl.UTF-8):	Dodatek do Zope z wygodnym narzędziem do zarządzaniem grupami i użytkownikami w Zope
 Name:		Zope-%{zope_subname}
 Version:	3.5
 # %%define		sub_ver Beta2
